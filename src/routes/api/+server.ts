@@ -8,6 +8,7 @@ export async function POST({ request}) {
     for (let [key, value] of entries) {
         query[key] = value;
     }
+    if (entries['boom']) throw new Error('boom');
     return json({
         request: data,
         query: query,

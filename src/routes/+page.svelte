@@ -6,7 +6,7 @@
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ x: 1, v: 0 }),
+                body: JSON.stringify({ x: 1, v: 0, boom: "boom" }),
             })
         ).json();
         console.log(v);
