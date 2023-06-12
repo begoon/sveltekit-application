@@ -7,8 +7,8 @@ export async function POST({ request}) {
     const entries = new URL(request.url).searchParams.entries();
     for (let [key, value] of entries) {
         query[key] = value;
+        if (key == 'boom') { return json({ error: 'boom' }, { status: 400 }); }
     }
-    if (entries['boom']) throw new Error('boom');
     return json({
         request: data,
         query: query,
