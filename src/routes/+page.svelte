@@ -1,7 +1,7 @@
 <script>
     const loader = async () => {
         const v = await (
-            await fetch("/api?abc=Z?z=10&boom=z", {
+            await fetch("/api?abc=Z&z=10&boom=z", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
